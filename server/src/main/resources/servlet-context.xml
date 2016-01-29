@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:app.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <context:component-scan base-package="com.wacai.finance.activity.controller"/>
+
+    <!-- 开启注解 -->
+    <mvc:annotation-driven  content-negotiation-manager="contentNegotiationManager"/>
+
+    <!-- 拦截器堆栈	-->
+    <mvc:interceptors>
+        <bean class="com.wacai.finance.activity.FrontLoginInterceptor"/>
+        <bean class="com.wacai.finance.activity.LoggingInterceptor"/>
+    </mvc:interceptors>
+
+
+    <!--扩展名(默认开启)/Parameter(默认不开启)/Accept Header(默认开启)-->
+    <bean id= "contentNegotiationManager" class= "org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <!--设置扩展名mimeType的映射无效，不然以.html的json请求会被执行返回 text/html导致406 Not Acceptable-->
+        <property name= "favorPathExtension" value= "false" />
+        <!-- 默认的content type -->
+        <property name= "defaultContentType" value= "text/html" />
+        <property name= "favorParameter" value= "true" />
+        <property name= "parameterName" value= "format"/>
+        <property name="mediaTypes">
+            <map>
+                <entry key="json" value="application/json"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1" />
+        <property name="viewResolvers">
+            <list>
+                <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+                <bean class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+                    <property name="prefix" value=""/>
+                    <property name="suffix" value=".vm"/>
+                    <property name="cache" value="false"/>
+                    <property name="contentType" value="text/html;charset=UTF-8"/>
+                    <property name="dateToolAttribute">
+                        <value>dateTool</value>
+                    </property>
+                    <property name="numberToolAttribute">
+                        <value>numberTool</value>
+                    </property>
+                </bean>
+                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                    <property name="prefix" value="/finance/act/jsp/" />
+                    <property name="suffix" value=".jsp" />
+                    <property name="cache" value="false"/>
+                </bean>
+            </list>
+        </property>
+        <!-- 内容协商管理器 用于决定media type -->
+        <property name= "contentNegotiationManager" ref= "contentNegotiationManager"/>
+        <!-- view 接口 下的视图解析对象 -->
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+                    <property name="jsonpParameterNames">
+                        <set>
+                            <value>jsonp</value>
+                            <value>callback</value>
+                        </set>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+
+    <!-- velocity的配置 -->
+    <bean id="velocityConfigurer"
+          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/finance/act/velocity/" />
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">UTF-8</prop>
+                <prop key="output.encoding">UTF-8</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
