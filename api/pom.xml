@@ -12,6 +12,13 @@
 
     <name>zk-liu-api</name>
     <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.2.0.RELEASE</version>
+        </dependency>
+    </dependencies>
 
 
     <properties>
