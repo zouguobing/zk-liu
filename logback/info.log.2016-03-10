@@ -1,0 +1,20 @@
+2016-03-10 15:02:49,655 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2016-03-10 15:02:49,831 INFO  [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Thu Mar 10 15:02:49 CST 2016]; root of context hierarchy
+2016-03-10 15:02:50,022 INFO  [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/binglove/Documents/workspace/zk-liu/server/target/classes/applicationContext-common.xml]
+2016-03-10 15:02:50,894 INFO  [localhost-startStop-1] o.s.b.f.c.PropertyPlaceholderConfigurer - Loading properties file from ServletContext resource [/WEB-INF/conf/app.properties]
+2016-03-10 15:02:50,902 INFO  [localhost-startStop-1] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-10 15:02:51,291 INFO  [localhost-startStop-1] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 
+2016-03-10 15:02:51,292 INFO  [localhost-startStop-1] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myExecutor' of type [class org.springframework.scheduling.config.TaskExecutorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-03-10 15:02:51,292 INFO  [localhost-startStop-1] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myExecutor' of type [class org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-03-10 15:02:51,459 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1797 ms
+2016-03-10 15:02:51,717 INFO  [localhost-startStop-1] o.s.w.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2016-03-10 15:02:51,725 INFO  [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Thu Mar 10 15:02:51 CST 2016]; parent: Root WebApplicationContext
+2016-03-10 15:02:51,726 INFO  [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [servlet-context.xml]
+2016-03-10 15:02:52,200 INFO  [localhost-startStop-1] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-10 15:02:52,568 INFO  [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout]}" onto public java.lang.String com.bt.liu.controller.LoginController.logout(javax.servlet.http.HttpSession)
+2016-03-10 15:02:52,574 INFO  [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.bt.liu.controller.LoginController.login(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2016-03-10 15:02:53,329 INFO  [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Thu Mar 10 15:02:51 CST 2016]; parent: Root WebApplicationContext
+2016-03-10 15:02:53,416 INFO  [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Thu Mar 10 15:02:51 CST 2016]; parent: Root WebApplicationContext
+2016-03-10 15:02:53,615 INFO  [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-10 15:02:53,669 INFO  [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-03-10 15:02:53,954 INFO  [localhost-startStop-1] o.s.w.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 2236 ms

@@ -1,0 +1,138 @@
+2016-03-17 11:20:06,121 INFO  [ZkClient-EventThread-17-127.0.0.1:21181] c.github.zkclient.ZkEventThread - Starting ZkClient event thread.
+2016-03-17 11:20:06,136 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:host.name=172.16.106.63
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_45
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/local/Cellar/maven/3.2.3/libexec/boot/plexus-classworlds-2.5.1.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/Users/binglove/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2016-03-17 11:20:06,137 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/var/folders/8t/hfdh0lwj7lvclzl56zwl44q00000gn/T/
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.name=Mac OS X
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.arch=x86_64
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.version=10.10.3
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.name=binglove
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.home=/Users/binglove
+2016-03-17 11:20:06,138 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/Users/binglove/Documents/workspace/zk-liu/server
+2016-03-17 11:20:06,139 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:21181 sessionTimeout=30000 watcher=com.bt.liu.support.ZkSerClient@15f47ab7
+2016-03-17 11:20:06,171 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:20:06,197 WARN  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_45]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_45]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350) ~[zookeeper-3.4.5.jar:3.4.5-1392090]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1068) ~[zookeeper-3.4.5.jar:3.4.5-1392090]
+2016-03-17 11:20:07,307 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:20:07,311 WARN  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_45]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_45]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350) ~[zookeeper-3.4.5.jar:3.4.5-1392090]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1068) ~[zookeeper-3.4.5.jar:3.4.5-1392090]
+2016-03-17 11:20:08,418 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:20:08,419 WARN  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_45]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_45]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350) ~[zookeeper-3.4.5.jar:3.4.5-1392090]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1068) ~[zookeeper-3.4.5.jar:3.4.5-1392090]
+2016-03-17 11:20:09,528 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:20:09,533 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:20:09,970 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110000, negotiated timeout = 30000
+2016-03-17 11:20:09,971 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2016-03-17 11:21:41,739 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 20134ms for sessionid 0x15382966b110000, closing socket connection and attempting reconnect
+2016-03-17 11:21:45,143 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (Disconnected)
+2016-03-17 11:21:46,373 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:21:46,374 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:21:46,375 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110000, negotiated timeout = 30000
+2016-03-17 11:21:46,375 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2016-03-17 11:23:39,022 INFO  [ZkClient-EventThread-17-127.0.0.1:21181] c.github.zkclient.ZkEventThread - Starting ZkClient event thread.
+2016-03-17 11:23:39,028 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:host.name=172.16.106.63
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_45
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/local/Cellar/maven/3.2.3/libexec/boot/plexus-classworlds-2.5.1.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/Users/binglove/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/var/folders/8t/hfdh0lwj7lvclzl56zwl44q00000gn/T/
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.name=Mac OS X
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.arch=x86_64
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.version=10.10.3
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.name=binglove
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.home=/Users/binglove
+2016-03-17 11:23:39,030 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/Users/binglove/Documents/workspace/zk-liu/server
+2016-03-17 11:23:39,031 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:21181 sessionTimeout=30000 watcher=com.bt.liu.support.ZkSerClient@27c96324
+2016-03-17 11:23:39,055 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:23:39,071 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:23:39,092 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110001, negotiated timeout = 30000
+2016-03-17 11:23:39,094 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2016-03-17 11:24:39,959 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 25068ms for sessionid 0x15382966b110001, closing socket connection and attempting reconnect
+2016-03-17 11:24:40,066 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (Disconnected)
+2016-03-17 11:24:41,418 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:24:41,420 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:24:41,422 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110001, negotiated timeout = 30000
+2016-03-17 11:24:41,423 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2016-03-17 11:44:04,458 INFO  [ZkClient-EventThread-17-127.0.0.1:21181] c.github.zkclient.ZkEventThread - Starting ZkClient event thread.
+2016-03-17 11:44:04,464 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2016-03-17 11:44:04,471 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:host.name=172.16.106.63
+2016-03-17 11:44:04,471 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_45
+2016-03-17 11:44:04,471 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+2016-03-17 11:44:04,471 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+2016-03-17 11:44:04,471 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/local/Cellar/maven/3.2.3/libexec/boot/plexus-classworlds-2.5.1.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar
+2016-03-17 11:44:04,471 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/Users/binglove/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/var/folders/8t/hfdh0lwj7lvclzl56zwl44q00000gn/T/
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.name=Mac OS X
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.arch=x86_64
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.version=10.10.3
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.name=binglove
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.home=/Users/binglove
+2016-03-17 11:44:04,472 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/Users/binglove/Documents/workspace/zk-liu/server
+2016-03-17 11:44:04,473 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:21181 sessionTimeout=30000 watcher=com.bt.liu.support.ZkSerClient@2a7ef726
+2016-03-17 11:44:04,525 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:44:04,539 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:44:04,548 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110002, negotiated timeout = 30000
+2016-03-17 11:44:04,550 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2016-03-17 11:47:19,896 INFO  [ZkClient-EventThread-17-127.0.0.1:21181] c.github.zkclient.ZkEventThread - Starting ZkClient event thread.
+2016-03-17 11:47:19,906 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2016-03-17 11:47:19,907 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:host.name=172.16.106.63
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_45
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/local/Cellar/maven/3.2.3/libexec/boot/plexus-classworlds-2.5.1.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/Users/binglove/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/var/folders/8t/hfdh0lwj7lvclzl56zwl44q00000gn/T/
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.name=Mac OS X
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.arch=x86_64
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.version=10.10.3
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.name=binglove
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.home=/Users/binglove
+2016-03-17 11:47:19,908 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/Users/binglove/Documents/workspace/zk-liu/server
+2016-03-17 11:47:19,909 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:21181 sessionTimeout=30000 watcher=com.bt.liu.support.ZkSerClient@4dd1b2fc
+2016-03-17 11:47:19,937 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:47:19,956 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:47:19,974 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110003, negotiated timeout = 30000
+2016-03-17 11:47:19,978 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2016-03-17 11:48:28,948 INFO  [ZkClient-EventThread-17-127.0.0.1:21181] c.github.zkclient.ZkEventThread - Starting ZkClient event thread.
+2016-03-17 11:48:28,954 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2016-03-17 11:48:28,967 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:host.name=172.16.106.63
+2016-03-17 11:48:28,967 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_45
+2016-03-17 11:48:28,967 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+2016-03-17 11:48:28,967 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+2016-03-17 11:48:28,968 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/local/Cellar/maven/3.2.3/libexec/boot/plexus-classworlds-2.5.1.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar
+2016-03-17 11:48:28,968 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/Users/binglove/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/var/folders/8t/hfdh0lwj7lvclzl56zwl44q00000gn/T/
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.name=Mac OS X
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.arch=x86_64
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:os.version=10.10.3
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.name=binglove
+2016-03-17 11:48:28,969 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.home=/Users/binglove
+2016-03-17 11:48:28,970 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/Users/binglove/Documents/workspace/zk-liu/server
+2016-03-17 11:48:28,970 INFO  [localhost-startStop-1] org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:21181 sessionTimeout=30000 watcher=com.bt.liu.support.ZkSerClient@6f8bd519
+2016-03-17 11:48:29,002 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:21181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-17 11:48:29,018 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:21181, initiating session
+2016-03-17 11:48:29,026 INFO  [localhost-startStop-1-SendThread(localhost:21181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:21181, sessionid = 0x15382966b110004, negotiated timeout = 30000
+2016-03-17 11:48:29,028 INFO  [localhost-startStop-1-EventThread] com.github.zkclient.ZkClient - zookeeper state changed (SyncConnected)
