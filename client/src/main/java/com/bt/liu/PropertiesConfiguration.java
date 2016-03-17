@@ -80,7 +80,7 @@ public class PropertiesConfiguration implements InitializingBean {
         if (b != null) {
             return b;
         } else {
-            throw new NoSuchElementException('\'' + key + " doesn't map to an existing object");
+            throw new NoSuchElementException('\'' + key + "' doesn't map to an existing object");
         }
     }
 
@@ -247,6 +247,8 @@ public class PropertiesConfiguration implements InitializingBean {
     public String getString(String key) {
         return getString(key,null);
     }
+
+
 
     public String getString(String key, String defaultValue) {
         String value = getProperty(key);

@@ -62,6 +62,6 @@ public class MD5 {
 
 
     static class InnerMD5 {
-        private static MD5 md5 = new MD5();
+        private final static MD5 md5 = new MD5();
     }
 }

@@ -18,7 +18,6 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class ZkLiuClient extends ZkClient {
 
-
     static Logger logger = LoggerFactory.getLogger(ZkLiuClient.class);
 
     //配置管理Map集合, key -> module  value -> module下的node map集合
