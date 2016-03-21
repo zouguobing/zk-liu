@@ -101,18 +101,19 @@ public class ZkLiuClient {
         }
         for (String moduleName : moduleChildren) {
             String modulePath = parentPath + "/" + moduleName;
+            //订阅module的子节点变更
+            zkClient.subscribeChildChanges(modulePath, new ZkLiuChildListener(this, true));
             List<String> nodeChildren = zkClient.getChildren(modulePath);
-            if (nodeChildren != null && !nodeChildren.isEmpty()) {
+            if (!nodeChildren.isEmpty()) {
                 for (String nodeName : nodeChildren) {
                     String nodePath = modulePath + "/" + nodeName;
-                    configMap.put(moduleName + "." + nodeName, readValue(nodePath));
                     zkClient.subscribeDataChanges(nodePath, new ZkLiuDataListener(this));
+                    configMap.put(moduleName + "." + nodeName, readValue(nodePath));
                 }
             }
             addModule(moduleName);
-            //订阅module的子节点变更
-            zkClient.subscribeChildChanges(modulePath, new ZkLiuChildListener(this, true));
         }
+        coverProperties();
         //记录客户端信息
         zkClient.createEphemeralSequential(ROOT_PATH + "clients/" + applicationName, KryoSerialization.serialize(new LiuClient(applicationName, profile, projectCode, isModule ? modules : "*")));
     }
@@ -197,6 +198,13 @@ public class ZkLiuClient {
             String key = (String) entry.getKey();
             String value = (String) entry.getValue();
             configMap.put(key,value);
+        }
+    }
+
+    //初始化覆盖本地缓存配置数据
+    private void coverProperties() {
+        for(Map.Entry<String,String> entry : configMap.entrySet()) {
+            properties.setProperty(entry.getKey(),entry.getValue());
         }
     }
 
