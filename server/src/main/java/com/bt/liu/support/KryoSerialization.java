@@ -20,7 +20,7 @@ public class KryoSerialization {
 
     public static byte[] serialize(Object serObj) {
         byte[] buffer = new byte[2048];
-        try(Output output = new Output(buffer)) {
+        try(Output output = new Output(buffer,-1)) {
             kryos.get().writeObject(output,serObj);
             return output.toBytes();
         }

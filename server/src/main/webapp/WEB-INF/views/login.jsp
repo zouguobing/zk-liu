@@ -16,7 +16,7 @@
 <body class="login2">
 <!-- Login Screen -->
 <div class="login-wrapper">
-    <a href="#"><img src="/resources/css/bootstrap/img/logo-login@2x.png"></a>
+    <a href="#"><img src="/resources/css/bootstrap/img/login-show.png"></a>
     <form id="loginForm" class="form-signin"  action="/login" method="post" autocomplete="off">
         <div class="form-group">
             <div class="input-group">

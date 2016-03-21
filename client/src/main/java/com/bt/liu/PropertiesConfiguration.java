@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 
-import java.util.Map;
 import java.util.NoSuchElementException;
 
 /**
@@ -15,7 +14,6 @@ public class PropertiesConfiguration implements InitializingBean {
 
 
     private static final Logger logger = LoggerFactory.getLogger(PropertiesConfiguration.class);
-
 
     //zk 服务地址列表
     private String zkServers;
@@ -29,26 +27,30 @@ public class PropertiesConfiguration implements InitializingBean {
     //环境 dev test pro
     private String profile;
 
-    //集体配置...
-    private Map<String,Map<String,String>> configMap;
+    //应用名称
+    private String applicationName;
 
 
-    public PropertiesConfiguration(String zkServers, String projectCode,String profile,String modules) {
+    private ZkLiuClient zkLiuClient;
+
+    public PropertiesConfiguration(String zkServers, String appName, String projectCode, String profile, String modules) {
         this.modules = modules;
         this.profile = profile;
         this.projectCode = projectCode;
         this.zkServers = zkServers;
+        this.applicationName = appName;
     }
 
-    public PropertiesConfiguration(String zkServers, String projectCode,String profile) {
+    public PropertiesConfiguration(String zkServers, String appName, String projectCode, String profile) {
         this.profile = profile;
         this.projectCode = projectCode;
         this.zkServers = zkServers;
+        this.applicationName = appName;
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        configMap = new ZkLiuClient(zkServers,projectCode,modules,profile).getConfigMap();
+        zkLiuClient = new ZkLiuClient(zkServers, projectCode, profile, modules, applicationName);
     }
 
     public boolean getBoolean(String key, boolean defaultValue) {
@@ -245,9 +247,8 @@ public class PropertiesConfiguration implements InitializingBean {
     }
 
     public String getString(String key) {
-        return getString(key,null);
+        return getString(key, null);
     }
-
 
 
     public String getString(String key, String defaultValue) {
@@ -258,12 +259,7 @@ public class PropertiesConfiguration implements InitializingBean {
 
 
     private String getProperty(String key) {
-        int index = key.indexOf(".");
-        String moduleName = key.substring(0,index);
-        String nodeName = key.substring(index+1);
-        Map<String,String> nodeMap = configMap.get(moduleName);
-        if(nodeMap == null) return null;
-        return nodeMap.get(nodeName);
+        return zkLiuClient.getValue(key);
     }
 
 }

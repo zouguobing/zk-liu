@@ -1,7 +1,9 @@
 .idea/
-zk-liu.iml
-zk-liu.ipr
-zk-liu.iws
+*.iml
+*.ipr
+*.iws
 logback/
 */target/
+.DS_Store
+*/.DS_Store
 

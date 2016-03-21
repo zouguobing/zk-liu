@@ -70,6 +70,6 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         if(permission == null) {
             return true;
         }
-       return Arrays.asList(permission.userName().split("\\|")).parallelStream().anyMatch(e -> e.equals(user.getUserName()));
+       return Arrays.stream(permission.userName().split("\\|")).anyMatch(e -> e.equals(user.getUserName()));
     }
 }
