@@ -38,11 +38,11 @@ public class ZkLiuChildListener implements IZkChildListener {
                 String key  = moduleName + "." + nodeName;
                 if (!zkLiuClient.containsKey(key)) {
                     String nodePath = new StringBuilder(parentPath).append("/").append(nodeName).toString();
+                    zkLiuClient.subscribeDataChanges(nodePath, new ZkLiuDataListener(zkLiuClient));
                     String value = zkLiuClient.readValue(nodePath);
                     if (logger.isInfoEnabled())
                         logger.info("更新配置节点数据 profile/projectCode/module/node -> {} value -> ", parentPath.replace(ZkLiuClient.ROOT_PATH, "") + "/" + nodeName, value);
                     zkLiuClient.putValue(key, value);
-                    zkLiuClient.subscribeDataChanges(nodePath, new ZkLiuDataListener(zkLiuClient));
                 }
             }
         } else { //2. 删除/增加了 module节点
