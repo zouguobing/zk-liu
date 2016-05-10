@@ -78,7 +78,7 @@ public class ZkLiuClient {
         } catch (ZkTimeoutException | IllegalStateException zkException) {
             logger.warn("connect to zk server exception, load properties from local cache");
             recover();
-        } catch (Exception e) {
+        } catch (Throwable e) {
             throw new RuntimeException("配置数据加载异常", e);
         }
     }
